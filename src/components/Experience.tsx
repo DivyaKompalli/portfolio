@@ -1,22 +1,22 @@
-import React from 'react';
-import { Calendar, MapPin, Building, ChevronRight } from 'lucide-react';
+import React from "react";
+import { Calendar, MapPin, Building, ChevronRight } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      title: "PSD Internship",
+      title: "Generative AI Internship",
       company: "AICTE",
-      location: "Hyderabad",
+      location: "Hyderabad (Remote)",
       duration: "November 2024 - May 2025",
-      type: "Current",
+      type: "Completed",
       description: "Building a chatbot using NLP with advanced techniques",
       highlights: [
         "Implementing tokenization, named entity recognition, and intent classification",
         "Developing rule-based, retrieval-based, and generative models",
         "Deploying chatbot on web platforms with continuous improvement systems",
-        "Gaining expertise in Natural Language Processing and conversational AI"
+        "Gaining expertise in Natural Language Processing and conversational AI",
       ],
-      color: "blue"
+      color: "blue",
     },
     {
       title: "Software Development Intern",
@@ -24,15 +24,16 @@ const Experience = () => {
       location: "Hyderabad (Remote)",
       duration: "May 2024 - July 2024",
       type: "Completed",
-      description: "Developed a robust password manager using Python, Tkinter, and SQL",
+      description:
+        "Developed a robust password manager using Python, Tkinter, and SQL",
       highlights: [
         "Implemented strong encryption algorithms for secure password storage",
         "Created user-friendly interface for password generation and management",
         "Delivered a fully functional one-month password manager solution",
-        "Gained valuable experience in full-stack development and data security"
+        "Gained valuable experience in full-stack development and data security",
       ],
-      color: "teal"
-    }
+      color: "teal",
+    },
   ];
 
   return (
@@ -40,11 +41,15 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">Experience</span>
+            Professional{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">
+              Experience
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-teal-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Hands-on experience in software development, AI/ML, and innovative technology solutions
+            Hands-on experience in software development, AI/ML, and innovative
+            technology solutions
           </p>
         </div>
 
@@ -58,18 +63,25 @@ const Experience = () => {
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                   <div className="flex-1">
                     <div className="flex items-center mb-2">
-                      <h3 className="text-2xl font-bold text-gray-900 mr-3">{exp.title}</h3>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        exp.type === 'Current' 
-                          ? 'bg-green-100 text-green-800' 
-                          : 'bg-gray-100 text-gray-800'
-                      }`}>
+                      <h3 className="text-2xl font-bold text-gray-900 mr-3">
+                        {exp.title}
+                      </h3>
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          exp.type === "Current"
+                            ? "bg-green-100 text-green-800"
+                            : "bg-gray-100 text-gray-800"
+                        }`}
+                      >
                         {exp.type}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center text-gray-600 mb-2">
-                      <Building size={18} className={`mr-2 text-${exp.color}-600`} />
+                      <Building
+                        size={18}
+                        className={`mr-2 text-${exp.color}-600`}
+                      />
                       <span className="font-medium">{exp.company}</span>
                     </div>
 
@@ -89,10 +101,15 @@ const Experience = () => {
                 <p className="text-gray-700 mb-6 text-lg">{exp.description}</p>
 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">
+                    Key Achievements:
+                  </h4>
                   {exp.highlights.map((highlight, hIndex) => (
                     <div key={hIndex} className="flex items-start">
-                      <ChevronRight size={16} className={`text-${exp.color}-600 mr-2 mt-1 flex-shrink-0`} />
+                      <ChevronRight
+                        size={16}
+                        className={`text-${exp.color}-600 mr-2 mt-1 flex-shrink-0`}
+                      />
                       <span className="text-gray-700">{highlight}</span>
                     </div>
                   ))}
