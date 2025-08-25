@@ -1,5 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Home, User, Briefcase, Code, Award, Mail } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Menu,
+  X,
+  Home,
+  User,
+  Briefcase,
+  Code,
+  Award,
+  Mail,
+} from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,35 +18,37 @@ const Header = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMenuOpen(false);
   };
 
   const navItems = [
-    { icon: Home, label: 'Home', id: 'home' },
-    { icon: User, label: 'About', id: 'about' },
-    { icon: Briefcase, label: 'Experience', id: 'experience' },
-    { icon: Code, label: 'Projects', id: 'projects' },
-    { icon: Award, label: 'Skills', id: 'skills' },
-    { icon: Mail, label: 'Contact', id: 'contact' },
+    { icon: Home, label: "Home", id: "home" },
+    { icon: User, label: "About", id: "about" },
+    { icon: Briefcase, label: "Experience", id: "experience" },
+    { icon: Code, label: "Projects", id: "projects" },
+    { icon: Award, label: "Skills", id: "skills" },
+    { icon: Mail, label: "Contact", id: "contact" },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      }`}
+    >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="font-bold text-xl text-gray-900">
-            Sri Divya Muktha
+            Sri Divya Muktha Kompalli
           </div>
 
           {/* Desktop Navigation */}
