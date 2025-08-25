@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Third-year <strong>Information Technology</strong> student at GRIET,
+            Final-year <strong>Information Technology</strong> student at GRIET,
             passionate about
             <strong className="text-blue-600"> Full-Stack Development</strong>,
             <strong className="text-teal-600"> AI/ML</strong>, and
